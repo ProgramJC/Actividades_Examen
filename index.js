@@ -10,7 +10,7 @@ conectarDB();
 const listaBlanca = [process.env.FRONTED_URL] 
 const corsOptions = {
   origin: function(origin, callback){
-    console.log(origin)
+    console.log("este es el origen",origin)
     if(listaBlanca.includes(origin)){
       callback(null, true)
     }else{

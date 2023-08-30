@@ -16,6 +16,7 @@ const crearActividad = async ( req, res )=>{
 }
 const eliminarActividad = async(req, res) =>{
      const {id} = req.params;
+     console.log(id)
     const actividad = await Actividad.findById(id);
     if (!actividad) {
         const error = new Error("Actividad no encontrada")
